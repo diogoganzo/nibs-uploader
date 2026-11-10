@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nibs Uploader — Login</title>
+<style>body{font-family:-apple-system,Helvetica,Arial,sans-serif;max-width:720px;margin:40px auto;padding:0 16px;line-height:1.6;color:#222;background:#fff}h1{color:#7a4a05}code{background:#f3eee4;padding:2px 6px;border-radius:4px;word-break:break-all}</style>
+</head><body>
+<h1>Nibs Uploader</h1>
+<p id="msg">Returning to the Nibs Uploader on this computer…</p>
+<script>
+// Repassa o retorno do login do TikTok (code/state/error) para o uploader rodando neste computador.
+var q = location.search;
+if (q) {
+  location.replace("http://127.0.0.1:8765/callback" + q);
+  setTimeout(function () {
+    document.getElementById("msg").innerHTML =
+      "If the uploader did not receive the login automatically, copy this code into it:<br><code>" +
+      (new URLSearchParams(q).get("code") || "(no code)") + "</code>";
+  }, 2500);
+} else {
+  document.getElementById("msg").textContent = "This page is used by the Nibs Uploader to finish logging in with TikTok.";
+}
+</script>
+</body></html>
