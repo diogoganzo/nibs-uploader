@@ -8,6 +8,16 @@ h1{color:#7a4a05}a{color:#b5700a}img{width:96px;border-radius:16px}</style></hea
 <li>When the owner connects an account, the platform (e.g. TikTok) provides an access token and basic account information (display name, avatar, open ID) so the tool can confirm which account is connected.</li>
 <li>The tool uploads video files and captions that the owner created and chose to publish.</li>
 </ul>
+<h3>YouTube API Services</h3>
+<p>Nibs Uploader uses the <b>YouTube API Services</b> (YouTube Data API v3) to upload the owner&#x27;s own videos to the owner&#x27;s own YouTube channels. By using Nibs Uploader you agree to be bound by the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Information obtained through the YouTube API Services is also handled in accordance with the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+<ul>
+<li><b>YouTube data accessed:</b> the authorized channel&#x27;s ID and title (<code>channels.list</code>, mine=true), used only to confirm which channel is connected; and the video file, title, description, tags and privacy settings that the owner chooses to upload (<code>videos.insert</code>).</li>
+<li><b>Scopes:</b> youtube.upload and youtube.readonly. No other YouTube data is requested.</li>
+<li><b>Storage:</b> the OAuth access/refresh tokens are stored only on the owner&#x27;s computer (file permissions 600). Channel information is not stored; it is only displayed in the terminal.</li>
+<li><b>Sharing:</b> YouTube API data is never shared with, sold or transferred to any third party.</li>
+<li><b>Revoking access:</b> access can be revoked at any time on the Google security settings page: <a href="https://security.google.com/settings/security/permissions">https://security.google.com/settings/security/permissions</a>.</li>
+<li><b>Deletion:</b> deleting the local token file immediately removes all stored YouTube API data. Any stored data is deleted within 7 days after access is revoked, and no YouTube API data is kept for more than 30 days without being refreshed.</li>
+</ul>
 <h3>What we store</h3>
 <ul>
 <li>Only the access/refresh tokens of the owner&#x27;s own account, stored locally on the owner&#x27;s computer with restricted file permissions. No other user data is collected, stored, sold or shared.</li>
